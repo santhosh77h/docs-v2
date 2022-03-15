@@ -6,5 +6,6 @@ menu:
   name: Contributor License Agreement (CLA)
   weight: 60
   parent: About the project
-  url: https://influxdb.com/community/cla.html
+  params:
+    url: https://influxdb.com/community/cla.html
 ---
