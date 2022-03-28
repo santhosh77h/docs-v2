@@ -160,3 +160,8 @@ You can also see alerts on the **Alert History** page available under **Alerting
 ![Chronograf alert history](/img/chronograf/1-6-alerts-history.png)
 
 That's it! You've successfully used Chronograf to configure an alert rule to monitor your idle CPU usage and send notifications to Slack.
+
+## View Flux tasks
+
+Navigate to the **Flux Tasks** page under **Alerting** in the left navigation to see a list of Flux tasks.
+
