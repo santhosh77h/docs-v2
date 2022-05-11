@@ -1064,9 +1064,8 @@ influxd-ctl show
 
 ##### Show all meta and data nodes in a cluster
 
-In this example, the `show` command output displays that the cluster includes three meta nodes and two data nodes.
-Every node is using InfluxDB Enterprise `1.9.x-c1.9.x`.
-
+In this example, the `show` command output displays that the cluster includes three meta nodes, two data nodes and the RAFT status of each meta node. Every node is using InfluxDB Enterprise `1.9.x-c1.9.x`.
+<!-- 
 ```bash
 $ influxd-ctl show
 
@@ -1082,6 +1081,26 @@ TCP Address             Version         Labels
 cluster-node-01:8091    1.9.x-c1.9.x    {}
 cluster-node-02:8091    1.9.x-c1.9.x    {}
 cluster-node-03:8091    1.9.x-c1.9.x    {}
+``` -->
+
+```bash
+Data Nodes
+==========
+ID      TCP Address             HTTP Address            Version      Labels
+4       metatest_data_0_1:8088  metatest_data_0_1:8086  1.9.x-c1.9.x {}
+5       metatest_data_0_2:8088  metatest_data_0_2:8086  1.9.x-c1.9.x {}
+
+Meta Nodes
+==========
+ID      Raft Address            HTTP Address            Version      Labels
+1       metatest_meta_0_1:8089  metatest_meta_0_1:8091  1.9.x-c1.9.x {}
+2       metatest_meta_1_1:8089  metatest_meta_1_1:8091  1.9.x-c1.9.x {}
+3       metatest_meta_1_2:8089  metatest_meta_1_2:8091  1.9.x-c1.9.x {}
+
+Raft Status
+==========
+Leader  metatest_meta_0_1:8089
+Peers   ["metatest_meta_1_1:8089", "metatest_meta_1_2:8089"]
 ```
 
 ### `show-shards`
