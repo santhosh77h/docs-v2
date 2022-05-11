@@ -1062,7 +1062,7 @@ influxd-ctl show
 
 #### Examples
 
-##### Show all meta and data nodes in a cluster
+##### Show all meta and data nodes in a cluster, and RAFT status
 
 In this example, the `show` command output displays that the cluster includes three meta nodes, two data nodes and the RAFT status of each meta node. Every node is using InfluxDB Enterprise `1.9.x-c1.9.x`.
 <!-- 
